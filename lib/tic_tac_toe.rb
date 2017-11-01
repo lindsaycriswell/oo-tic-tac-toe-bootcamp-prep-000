@@ -113,7 +113,7 @@ class TicTacToe
       @board[won?[0]]
     end
   end
- 
+
  # +def play(board)
  # +  until over?(board)
  # +    turn(board)
