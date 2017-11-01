@@ -75,4 +75,18 @@ class TicTacToe
         "O"
       end
   end
+
+  def won?
+    WIN_COMBINATIONS.each do |combo|
+      position_1 = @board[combo[0]]
+      position_2 = @board[combo[1]]
+      position_3 = @board[combo[2]]
+ 
+      if (position_1 == "X" && position_2 == "X" && position_3 == "X") ||
+         (position_1 == "O" && position_2 == "O" && position_3 == "O")
+         return combo
+      end
+    end
+    false
+  end
 end
