@@ -95,4 +95,10 @@ class TicTacToe
       index == "X" || index == "O"
     end
   end
+
+  def draw?
+    if !won? && full?
+      true
+    end
+  end
 end
